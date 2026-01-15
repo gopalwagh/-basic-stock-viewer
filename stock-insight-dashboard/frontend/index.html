@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Insight Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="main-page">
+    <h1>📈 Stock Insight Dashboard</h1>
+
+    <div class="input-box">
+      <input
+        type="text"
+        id="symbolInput"
+        placeholder="Enter stock symbol (e.g. TCS)"
+      />
+      <button id="analyzeBtn" type="button">Analyze</button>
+    </div>
+
+    <div id="status"></div>
+
+    <div id="charts">
+      <h2>Price Chart</h2>
+      <img id="priceChart" alt="Stock Price Chart" />
+
+      <h2>Volume Chart</h2>
+      <img id="volumeChart" alt="Stock Volume Chart" />
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

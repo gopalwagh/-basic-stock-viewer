@@ -1,0 +1,112 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background: #0d1117; /* Dark finance terminal feel */
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+/* loader */
+
+/* Fullscreen loading */
+
+/* main page wala*/
+#main-page {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  
+  background: linear-gradient(135deg, #0d1117, #161b22, #1f2937);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.8rem;
+  color: #00ff99;
+  text-shadow: 
+    2px 2px 6px rgba(0, 0, 0, 0.8),
+    0 0 12px #00ff99;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* Stock ticker style status bar */
+#status {
+  margin: 15px auto;
+  font-weight: bold;
+  color: #ffd700;
+  padding: 10px;
+  border-radius: 10px;
+  width: 50%;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.input-box {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #00ff99;
+  border-radius: 6px;
+  background: #0d1117;
+  color: #fff;
+  outline: none;
+  transition: 0.6s;
+}
+
+input:focus {
+  border-color: #ff0066;
+  box-shadow: 0 0 10px #ff0066;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #00ff99, #00cc88);
+  color: #111;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ff0066, #cc0055);
+  color: #fff;
+  box-shadow: 0 0 15px #ff0066;
+}
+
+#charts {
+  display: none;
+  margin-top: 30px;
+}
+
+#charts h2 {
+  color: #00ff99;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #00ff99;
+  /* display: inline-block; */
+  padding-bottom: 5px;
+}
+
+img {
+  width: 50%;
+  min-height: 200px;
+  background: #1a1a1a;
+  margin: 15px auto;
+  border: 2px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,255,153,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(255,0,102,0.6);
+}
