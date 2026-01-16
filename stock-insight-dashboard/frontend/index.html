@@ -7,7 +7,16 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- loading page -->
+  <div id="loader1">
+    <h1>Loading...</h1>
+    <div class="progress-box">
+        <div class="progress-bar" id="bar"></div>
+    </div>
+    <p id="percent">0%</p>
+  </div>
 
+  <!-- main page -->
   <div id="main-page">
     <h1>📈 Stock Insight Dashboard</h1>
 
@@ -21,6 +30,12 @@
     </div>
 
     <div id="status"></div>
+    <!-- cicular loading -->
+      <div id="loader">
+        <div class="ring"></div>
+        <div class="loader-text">Analyzing Market Data</div>
+      </div>
+    
 
     <div id="charts">
       <h2>Price Chart</h2>
