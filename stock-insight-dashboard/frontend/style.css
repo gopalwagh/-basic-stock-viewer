@@ -114,12 +114,15 @@ button:hover {
   box-shadow: 0 0 15px #ff0066;
 }
 
+.volumeChart{
+  margin-bottom: 30px;
+}
+
 /* cicular loading css */
 /* Fullscreen loader */
 #loader {
   position: fixed;
-  inset: 0;
-  background: #000;
+  margin-left: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,8 +132,8 @@ button:hover {
 
 /* Circular ring */
 .ring {
-  width: 90px;
-  height: 90px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 6px solid #222;
   border-top: 6px solid #00ff88; /* market green */
@@ -178,7 +181,6 @@ button:hover {
   color: #00ff99;
   margin-bottom: 10px;
   border-bottom: 2px solid #00ff99;
-  /* display: inline-block; */
   padding-bottom: 5px;
 }
 
@@ -196,4 +198,25 @@ img {
 img:hover {
   transform: scale(1.03);
   box-shadow: 0 0 25px rgba(255,0,102,0.6);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  input {
+    margin-top: 10px;
+    width: 90%;
+
+  }
+  img{
+    width: 90%;
+    margin: 10px;
+  }
 }

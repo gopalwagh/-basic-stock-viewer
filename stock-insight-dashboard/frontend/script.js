@@ -34,17 +34,22 @@ function analyzeStock() {
   const status = document.getElementById("status");
   const charts = document.getElementById("charts");
 
-
   // if input is empty stop functioning and all
-  if (!symbol) return;
   
-  status.innerText = "Analyzing stock...";
+  status.innerText = "";
   charts.style.display = "none";
   loader.style.display = "flex";
 
   fetch(`/api/analyze?symbol=${symbol}`)
   .then(res => res.json())
-  .then(() => {
+  .then((data) => {
+    if(data.error){
+      status.innerText = data.error;
+      status.style.color = "red";
+      loader.style.display = "none";
+      return;
+    }
+
     const base = `/output/${symbol.toUpperCase()}`;
 
     const priceImg = document.getElementById("priceChart");
@@ -57,7 +62,7 @@ function analyzeStock() {
       if (loadedCount === 2) {
         loader.style.display = "none";
         charts.style.display = "block";
-        status.innerText = "Analysis completed";
+        status.innerText = "Analysis completed"; 
       }
     }
       // attach load listeners BEFORE setting src
